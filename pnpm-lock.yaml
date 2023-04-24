@@ -16,6 +16,9 @@ dependencies:
   katex:
     specifier: ^0.16.4
     version: 0.16.4
+  keycloak-js:
+    specifier: 21.1.0-1
+    version: registry.npmmirror.com/keycloak-js@21.1.0-1
   markdown-it:
     specifier: ^13.0.1
     version: 13.0.1
