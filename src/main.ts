@@ -5,7 +5,6 @@ import { setupAssets, setupScrollbarStyle } from './plugins'
 import { setupStore } from './store'
 import { setupRouter } from './router'
 import Keycloak from 'keycloak-js'
-import Vue from 'vue'
 
 
 async function bootstrap() {
@@ -31,7 +30,7 @@ let initOptions = {
 
 let keycloak = new Keycloak(initOptions);
 
-keycloak.init({ onLoad: initOptions.onLoad }).then((auth) => {
+keycloak.init({ onLoad: 'login-required' }).then((auth) => {
   if (!auth) {
     window.location.reload();
   } else {
